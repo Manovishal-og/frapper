@@ -33,7 +33,9 @@ frapper search Linux
 
 ### Output:
 
+```bash
 Title: Linux
 Description: open-source operating system
 
 Linux is a family of open-source Unix-like operating systems based on the Linux kernel
+```
