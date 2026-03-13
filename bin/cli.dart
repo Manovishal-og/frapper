@@ -9,7 +9,7 @@ void main(List<String> arguments) {
 		printUsage(); // Change this from 'Hello, Dart!'
 	}
 	else if (arguments.first == 'version') {
-		print('Search CLI version $version');
+		print('Frapper CLI version $version');
 	} 
 	else if (arguments.first == 'search') {
 		final inputArgs = arguments.length > 1 ? arguments.sublist(1) : null;
@@ -31,17 +31,17 @@ Future<String> wikipediaInfo(String article) async{
 		return response.body;
 	}
 
-	return 'Error: Failed to Fetch article $article.Status code: ${response.statusCode}';
+	return 'Error: Failed to Fetch Search term $article.Status code: ${response.statusCode}';
 }
 
 void searchWikipedia(List<String>? arguments) async { // Add this new function and add ? to arguments type
 	final String articleTitle;
 
 	if(arguments == null || arguments.isEmpty){
-		print("Please Provide an article");
+		print("Enter the Search term :");
 		articleTitle = stdin.readLineSync() ?? '';
 		if(articleTitle == null || articleTitle.isEmpty){
-			print("Please Provide an article title ");
+			print("Enter the Search term :  ");
 			return;
 		}
 	}
@@ -51,7 +51,7 @@ void searchWikipedia(List<String>? arguments) async { // Add this new function a
 		articleTitle = arguments.join(' ');
 	}
 
-	print("Looking for your article  $articleTitle");
+	print("Looking for your search result  $articleTitle");
 	var article = await wikipediaInfo(articleTitle);
 
 	final data = jsonDecode(article);
