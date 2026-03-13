@@ -13,5 +13,5 @@ A simple Wikipedia search tool written in Dart.
 ### Build from source
 
 ```bash
-dart compile exe bin/cli.dart -o dartpedia
+dart compile exe bin/cli.dart -o frapper
 sudo mv dartpedia /usr/local/bin/
