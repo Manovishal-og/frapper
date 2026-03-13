@@ -31,7 +31,7 @@ frapper search Linux
 frapper search Linux
 ```
 
-Output:
+### Output:
 
 Title: Linux
 Description: open-source operating system
